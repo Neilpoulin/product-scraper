@@ -17,9 +17,9 @@ function uploadProduct(product)
 module.exports.uploadProduct = uploadProduct;
 
 
-function createRecord({name, materials, tags, price="", taxonomy, seller, url, imageUrl}){
+function createRecord({name, materials, tags, price="", taxonomy, seller, url, imageUrl, description}){
     return new Promise((resolve, reject) => {
-        let row = {name, materials, tags, price, taxonomy, seller, url, images: [{url: imageUrl}]}
+        let row = {name, materials, tags, price, taxonomy, seller, url, description, images: [{url: imageUrl}]}
         base('Products').create(row, function(err, record) {
             if (err) {
                 console.error(err);

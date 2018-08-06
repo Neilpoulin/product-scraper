@@ -1,0 +1,78 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Fiyern Product Submission</title>
+        <style type="text/css">
+
+            body{
+                font-family: Helvetica,sans-serif;
+            }
+            .container {
+                width: 100%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100%;
+                justify-content: center;
+            }
+
+            form{
+                width: 700px;
+                max-width: 90vw;
+                display: flex;
+                flex-direction: column;
+            }
+
+            form input {
+                padding: 15px;
+                font-size: 16px;
+                border-radius: 6px;
+            }
+
+            button {
+                padding: 15px;
+                cursor: pointer;
+                font-size: 16px;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                border-radius: 6px;
+                background-color: #008900;
+                color: white;
+            }
+
+            button:focus {
+                outline: none;
+            }
+
+            button:hover {
+                background: #1c4600;
+            }
+
+            form > * {
+                margin-bottom: 30px;
+            }
+
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <h1>Product Ingest</h1>
+        <form target="_blank" action="https://us-central1-gifting-210217.cloudfunctions.net/product-scraper" method="GET">
+            <input type="url" id="inputUrl" name="url" placeholder="enter a url here..."/>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="container">
+            <h2>Product Library</h2>
+            <p>You can view full library on <a href="https://airtable.com/tbl2NvE72zkXjNopf/viwin8LXxWRU0bCbb" target="_blank">Airtable here.</a></p>
+
+            <iframe class="airtable-embed" src="https://airtable.com/embed/shrC2hipcp795uuFG?backgroundColor=green&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
